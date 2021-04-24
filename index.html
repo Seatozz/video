@@ -12,8 +12,7 @@
 <body>
     <style>
         * {
-            margin: 0;
-            padding: 0;
+            margin: 0px auto;
             box-sizing: border-box;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
@@ -75,17 +74,24 @@
         #wp-content {
             margin-top: 100px;
             width: 100%;
-            display: flex;
+            height: 100%;
+
+            /* display: flex;
+            flex-flow: row;
             justify-content: center;
+            align-content: center; */
         }
 
         .box-text {
+            background: #151515a4;
+
             width: 600px;
             min-height: auto;
-            background: #151515a4;
             padding: 40px 30px 45px;
-            border-radius: 50%;
             margin-top: 165px;
+            border-radius: 50%;
+
+            margin-top: 300px;
         }
 
         /* ==================EXTRA================= */
@@ -127,33 +133,17 @@
             color: #fff;
         }
 
-        a:hover {}
-
-        .text-center {
-            text-align: center;
+        a:hover {
+            color: #852624;
         }
 
         .br4rem {
             display: block;
             height: 4rem;
         }
-
-        #wrapper #header a[class^="text"] {
-            padding-right: 100px;
-            order: -1;
-        }
-
-        #wrapper #header a[class^="text"]:hover {
-            color: #852624;
-        }
-
-        #wrapper #header p[class*="text-center"]:hover {
-            color: #852624;
-        }
     </style>
     <div id="wrapper">
         <div id="header">
-            <p class="text-center text-menu font-hlbrush1">CSS Video Background</p>
             <a href="https://bns2.plaync.com/en/?d1=worldmap&d2=-&locale="
                 class="text-center text-menu  font-hlbrush1"><span class="fas fa-home"></span>Home</a>
         </div>
