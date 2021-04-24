@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=b, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+
+            #heroVideoBg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+                display: none;
+
+                @media (min-width: 768px) {
+                    display: inline-block;
+                }
+            }
+
+            #heroImgBg {
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1000;
+                height: auto;
+
+                @media (min-width: 768px) {
+                    display: none;
+                }
+            }
+
+            #heroContent {
+                text-align: center;
+                padding-top: 100px;
+            }
+        }
+
+        video {
+            position: fi;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            min-width: 100px;
+            background-color: #cfaccf;
+        }
+    </style>
+
+    <div> <a href="">Go to official web site</a></div>
+    <video autoplay loop muted>
+        <source type="video/mp4" src="Blade and soul.mp4">
+        <source type="video/webm" src="Blade and soul.mp4">
+    </video>
+    <img id="heroImgBg" src="#" alt="storm">
+    <div id="heroContent">
+        <h1>Get ricky!</h1>
+        <h2>We make it awesome</h2>
+    </div>
+    <section>
+        <div> <a href="">Go to official web site</a></div>
+    </section>
+
+</body>
+
+</html>
