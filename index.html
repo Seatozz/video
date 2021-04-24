@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=b, initial-scale=1.0">
-    <title>Document</title>
+    <link href="font/fontawesome/css/all.css" rel="stylesheet">
+    <title>Home</title>
 </head>
 
 <body>
@@ -14,78 +15,163 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
-        #hero {
-            position: relative;
-            width: 100%;
-            min-height: 100vh;
-
-            #heroVideoBg {
-                position: absolute;
-                top: 0;
-                left: 0;
+        @media (min-aspect-ratio:16/9) {
+            #videoBG {
                 width: 100%;
-                height: 100%;
-                object-fit: cover;
-                z-index: -1;
-                display: none;
-
-                @media (min-width: 768px) {
-                    display: inline-block;
-                }
-            }
-
-            #heroImgBg {
-                display: inline-block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                z-index: -1000;
                 height: auto;
-
-                @media (min-width: 768px) {
-                    display: none;
-                }
-            }
-
-            #heroContent {
-                text-align: center;
-                padding-top: 100px;
             }
         }
 
-        video {
-            position: fi;
-            top: 0;
-            left: 0;
+        @media(max-aspect-ratio:16/9) {
+            #videoBG {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        @media(max-width:767px) {
+            #videoBG {
+                display: none;
+            }
+
+            body {
+                background: url('poster.jpg');
+                background-size: cover;
+            }
+        }
+
+        @font-face {
+            src: url(font/hlbrush1.ttf);
+            font-family: hlbrush1;
+        }
+
+        /* =============MAIN ID CLASS============ */
+        #wrapper {
+            width: 100%;
+            margin: auto;
+
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+        #header {
+            /* background: #151515a4; */
+            color: #fff;
+
+            width: 100%;
+            height: 40px;
+            padding: 3px 0px 0px;
+
+            display: flex;
+            justify-content: center;
+
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        #wp-content {
+            margin-top: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .box-text {
+            width: 600px;
+            min-height: auto;
+            background: #151515a4;
+            padding: 40px 30px 45px;
+            border-radius: 50%;
+            margin-top: 165px;
+        }
+
+        /* ==================EXTRA================= */
+
+
+        .paragraph {
+            color: #ffffff;
+            font-family: 'Open Sans';
+            font-weight: lighter;
+            font-size: larger;
+            text-align: center;
+        }
+
+        .font-hlbrush1 {
+            font-family: hlbrush1;
+        }
+
+        #videoBG {
             width: 100%;
             height: 100%;
+            position: fixed;
+            z-index: -1;
+
+            top: 0;
+            left: 0;
+
             object-fit: cover;
+        }
+
+        .title-bns {
+            /* color: #dfcaa0d0; */
+            color: #ffa3e6;
+            padding-left: 40px;
+            font-size: xx-large;
         }
 
         a {
             text-decoration: none;
+            color: #fff;
         }
 
-        a:hover {
-            min-width: 100px;
-            background-color: #cfaccf;
+        a:hover {}
+
+        .text-center {
+            text-align: center;
+        }
+
+        .br4rem {
+            display: block;
+            height: 4rem;
+        }
+
+        #wrapper #header a[class^="text"] {
+            padding-right: 100px;
+            order: -1;
+        }
+
+        #wrapper #header a[class^="text"]:hover {
+            color: #852624;
+        }
+
+        #wrapper #header p[class*="text-center"]:hover {
+            color: #852624;
         }
     </style>
-
-    <video autoplay loop muted>
+    <div id="wrapper">
+        <div id="header">
+            <p class="text-center text-menu font-hlbrush1">CSS Video Background</p>
+            <a href="https://bns2.plaync.com/en/?d1=worldmap&d2=-&locale="
+                class="text-center text-menu  font-hlbrush1"><span class="fas fa-home"></span>Home</a>
+        </div>
+        <div id="wp-content" class="">
+            <div class="box-text ">
+                <h1 class="font-hlbrush1 title-bns">Blade and Soul</h1>
+                <div class="br4rem"></div>
+                <p class="paragraph">Join the ceaseless journey of Blade & Soul 2<br>
+                    with your unique charater.</p>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+    <video id="videoBG" autoplay loop muted poster="moment.jpg">
         <source type="video/mp4" src="Blade and soul.mp4">
         <source type="video/webm" src="Blade and soul.mp4">
     </video>
-    <img id="heroImgBg" src="#" alt="storm">
-    <div id="heroContent">
-        <h1>Get ricky!</h1>
-        <h2>We make it awesome</h2>
-    </div>
+
 
 </body>
 
